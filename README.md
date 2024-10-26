@@ -1,2 +1,1 @@
-# Discord_bot
-nuuu
+super duper cool discord bot from kaityxd!!!!!!!!
