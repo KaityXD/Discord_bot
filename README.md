@@ -22,7 +22,12 @@ code is kinda crappy if you face any issues just make pr if you can fix it but y
 
 # simple tutorial!
 
-- /set
+- /waifusetup channel: general autopost: true inteval: 30
+  it'll setup the autopost waifu image :D
+- /set_ai_channel
+  it'll setup the ai channel and userr can only use /ask in that channl only!
 
+
+# contact 
 - Gmail: kaitysocute@gmail.com
 
