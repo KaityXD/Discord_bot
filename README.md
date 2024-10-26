@@ -10,7 +10,7 @@ pip insatll git+https://github.com/nextcord/nextcord@master
 ```
 and mafic that i have forked by using
 ```bash
-pip install git+https://github.com/KaityXD/mafic
+pip install git+https://github.com/KaityXD/mafic@master
 ```
 
 code is kinda crappy if you face any issues just make pr if you can fix it but you also can report it ot me using github issues fetuses 
