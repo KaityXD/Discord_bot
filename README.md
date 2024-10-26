@@ -13,6 +13,6 @@ and mafic that i have forked by using
 pip install git+https://github.com/KaityXD/mafic
 ```
 
-code is kinda crappy if you face any issues just make prif you can fix it but you also can report it ot me using github issues fetuses 
+code is kinda crappy if you face any issues just make pr if you can fix it but you also can report it ot me using github issues fetuses 
 
 - Gmail: kaitysocute@gmail.com
