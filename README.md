@@ -6,7 +6,7 @@ for now mafic is not supporting nextcord 3.0 (github version)
 
 you need to install nextcord 3.0 by using
 ```bash
-pip insatll git+https://github.com/nextcord/nextcord@master
+pip install git+https://github.com/nextcord/nextcord@master
 ```
 and mafic that i have forked by using
 ```bash
