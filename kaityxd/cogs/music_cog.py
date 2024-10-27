@@ -7,6 +7,7 @@ from mafic import SearchType
 import asyncio
 import random
 from utils.music_utils import create_embed, format_duration, voice_channel_check
+from utils.config import *
 
 class GuildMusicState:
     def __init__(self):
@@ -25,10 +26,10 @@ class MusicCog(commands.Cog):
 
     async def add_nodes(self):
         await self.bot.pool.create_node(
-            host="localhost",
-            port=1026,
+            host=LAVALINK_HOST,
+            port=LAVALINK_PORT,
             label="MAIN",
-            password="youshallnotpass",
+            password=LAVALINK_PASSWORD,
         )
 
     @nextcord.slash_command(name="play", description="[🌺] Play some music")
