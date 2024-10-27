@@ -4,5 +4,6 @@ httpx
 requests
 Pillow
 git+https://github.com/KaityXD/mafic # We should probably make this a PR.
+git+https://github.ckm/nextcord/nextcord@master
 colorama
 psutil
