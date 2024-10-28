@@ -30,6 +30,7 @@ code is kinda crappy if you face any issues just make pr if you can fix it but y
 
 # contact 
 - Gmail: kaitysocute@gmail.com
+- Discord: https://discord.gg/kaityxd
 
 # license
 
