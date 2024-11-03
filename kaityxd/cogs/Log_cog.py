@@ -31,7 +31,7 @@ class LoggingListener(commands.Cog):
             if log_channel:
                 embed = Embed(
                     title="🗑️ Message Deleted",
-                    description=f"**Author:** {message.author.mention}\n**Content:** {message.content}",
+                    description=f"**Author:** {message.author.mention}\n**Content:** {message.content[1000]}",
                     color=0xff0000,
                     timestamp=datetime.utcnow()
                 )
@@ -51,8 +51,8 @@ class LoggingListener(commands.Cog):
                     title="✏️ Message Edited",
                     description=(
                         f"**Author:** {before.author.mention}\n"
-                        f"**Before:** {before.content}\n"
-                        f"**After:** {after.content}"
+                        f"**Before:** {before.content[1000]}\n"
+                        f"**After:** {after.content[1000]}"
                     ),
                     color=0x00ff00,
                     timestamp=datetime.utcnow()
