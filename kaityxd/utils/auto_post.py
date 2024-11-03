@@ -1,7 +1,7 @@
 import asyncio
 from typing import Dict
 import random
-import aiohttp
+import httpx
 from nextcord.ext import tasks
 from nextcord import Embed
 
@@ -18,14 +18,23 @@ class AutoPostManager:
             "poke", "dance", "cringe"
         ]
         self.api_url = "https://api.waifu.pics/sfw/"
+        self.api_nsfw = "https://api.waifu.pics/nsfw/"
 
     async def fetch_image(self, category):
-        async with aiohttp.ClientSession() as session:
-            async with session.get(f"{self.api_url}{category}") as response:
-                if response.status == 200:
-                    data = await response.json()
-                    return data.get("url")
-                return None
+        async with httpx.AsyncClient() as client:
+            response = await client.get(f"{self.api_url}{category}")
+            if response.status_code == 200:
+                data = response.json()
+                return data.get("url")
+            return None
+
+    async def fetch_image_nsfw(self, category):
+        async with httpx.AsyncClient() as client:
+            response = await client.get(f"{self.api_nsfw}{category}")
+            if response.status_code == 200:
+                data = response.json()
+                return data.get("url")
+            return None
 
     def create_auto_post_task(self, guild_id: int, channel_id: int, interval: int):
         """Creates a new auto-post task for a guild"""
