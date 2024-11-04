@@ -1,7 +1,7 @@
 import os
 from typing import Optional, List, Literal
 from dataclasses import dataclass
-from utils.config import YOUR_ID
+from utils.config import OWNER_ID
 
 import nextcord
 from nextcord import Interaction, ButtonStyle, Embed, Color
@@ -201,4 +201,4 @@ class CogManager(commands.Cog):
 
 def setup(bot: Bot):
     """Set up the CogManager cog."""
-    bot.add_cog(CogManager(bot, owner_id=YOUR_ID))
+    bot.add_cog(CogManager(bot, owner_id=OWNER_ID))
