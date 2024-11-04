@@ -7,9 +7,6 @@ from nextcord.ext import commands
 from utils.config import HEADERS
 from utils.config import API_BASE_URL
 
-API_BASE_URL = "REPLACE ME"
-HEADERS = {"Authorization": "REPLACE ME"}
-
 class AICog(commands.Cog):
     """A cog for handling AI interactions using Cloudflare AI."""
     
