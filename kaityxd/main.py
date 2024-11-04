@@ -1,11 +1,12 @@
 import os
 import nextcord
 import asyncio
+import sys
 from nextcord.ext import commands
 from utils.config import BOT_TOKEN
 from nextcord import *
 from colorama import init, Fore
-init()
+init(autoreset=True)
 
 bot = commands.Bot(intents=Intents.all(), help_command=None)
 
@@ -35,4 +36,8 @@ for filename in os.listdir('./cogs'):
 print(Fore.YELLOW + f"\nTotal Cogs Loaded: {loaded_cogs}")
 
 if __name__ == '__main__':
-    bot.run(BOT_TOKEN)
+    if BOT_TOKEN:
+      bot.run(BOT_TOKEN)
+    else:
+      print(Fore.RED + "[ERR]: Bot token not specified!")
+      sys.exit()

@@ -1,2 +1,6 @@
 BOT_TOKEN = "" # your token
-API_KEY = "" # no longer use
+LAVALINK_PASSWORD = ""
+LAVALINK_PORT = ""
+LAVALINK_HOST = ""
+HEADERS = {"Authorization": ""}
+API_BASE_URL = ""

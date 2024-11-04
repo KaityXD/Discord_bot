@@ -4,6 +4,8 @@ from typing import Dict, Any, List
 import httpx
 import nextcord
 from nextcord.ext import commands
+from utils.config import HEADERS
+from utils.config import API_BASE_URL
 
 API_BASE_URL = "REPLACE ME"
 HEADERS = {"Authorization": "REPLACE ME"}
@@ -215,7 +217,7 @@ Interests: {', '.join(self.bot_identity['interests'])}"""
         )
 
 def setup(bot):
-    if API_BASE_URL or HEADERS["Authorization"] == "REPLACE ME":
-        print("[WARN]: Not loading AI Cog due to improper configuration!")
+    if API_BASE_URL and HEADERS["Authorization"]:
+        print("[WARN]: Cannot load AI Chatbot due to improper configuration!")
     else:
         bot.add_cog(AICog(bot))

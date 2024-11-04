@@ -7,7 +7,9 @@ from mafic import SearchType
 import asyncio
 import random
 from utils.music_utils import create_embed, format_duration, voice_channel_check
-from utils.config import *
+from utils.config import LAVALINK_PORT
+from utils.config import LAVALINK_HOST
+from utils.config import LAVALINK_PASSWORD
 
 class GuildMusicState:
     def __init__(self):
@@ -300,4 +302,7 @@ class MusicCog(commands.Cog):
         embed = create_embed("", "Wiped queue and stop songs")
         await inter.response.send_message(embed=embed)
 def setup(bot):
-    bot.add_cog(MusicCog(bot))
+    if LAVALINK_PORT and LAVALINK_HOST and LAVALINK_PASSWORD:
+      bot.add_cog(MusicCog(bot))
+    else:
+      print("[WARN]: Cannot load music features due to improper configuration!")
