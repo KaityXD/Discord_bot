@@ -1,7 +1,7 @@
 import os
 from typing import Optional, List, Literal
 from dataclasses import dataclass
-from util.config import YOUR_ID
+from utils.config import YOUR_ID
 
 import nextcord
 from nextcord import Interaction, ButtonStyle, Embed, Color
