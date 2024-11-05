@@ -215,6 +215,6 @@ Interests: {', '.join(self.bot_identity['interests'])}"""
 
 def setup(bot):
     if API_BASE_URL and HEADERS["Authorization"]:
-        print("[WARN]: Cannot load AI Chatbot due to improper configuration!")
-    else:
         bot.add_cog(AICog(bot))
+    else:
+        print("[WARN]: Cannot load AI Chatbot due to improper configuration!")
