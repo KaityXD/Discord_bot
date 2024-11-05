@@ -35,8 +35,8 @@ class Filter(commands.Cog):
             result = cursor.fetchone()
 
             if result:
-                words = eval(result[0])
-                whitelist = eval(result[1])
+                words = result[0]
+                whitelist = result[1]
             else:
                 words, whitelist = [], []
                 cursor.execute("INSERT INTO filters (guild_id, words, whitelist) VALUES (?, '[]', '[]')", (guild_id,))
