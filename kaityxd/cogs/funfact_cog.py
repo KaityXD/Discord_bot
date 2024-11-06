@@ -1,4 +1,5 @@
 import nextcord
+from nextcord import IntegrationType, Interaction, InteractionContextType
 from nextcord.ext import commands
 import httpx
 
@@ -6,7 +7,18 @@ class FunFactsCog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @nextcord.slash_command(name="funfact", help="Get a random fun fact from the web!")
+    @nextcord.slash_command(
+        name="funfact", 
+        help="Get a random fun fact from the web!",
+        integration_types=[
+        IntegrationType.user_install, 
+        IntegrationType.guild_install,
+    ],
+    contexts=[
+        InteractionContextType.guild,  
+        InteractionContextType.bot_dm,  
+        InteractionContextType.private_channel,  
+    ],)
     async def funfact(self, ctx):
         async with httpx.AsyncClient() as client:
             response = await client.get("https://uselessfacts.jsph.pl/random.json?language=en")
