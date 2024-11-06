@@ -5,3 +5,4 @@ LAVALINK_HOST = ""
 HEADERS = {"Authorization": ""}
 API_BASE_URL = ""
 OWNER_ID = 0000000000000000 
+# good luckk
