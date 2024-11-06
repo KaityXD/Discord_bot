@@ -9,7 +9,7 @@ class FunFactsCog(commands.Cog):
 
     @nextcord.slash_command(
         name="funfact", 
-        help="Get a random fun fact from the web!",
+        description="Get a random fun fact from the web!",
         integration_types=[
         IntegrationType.user_install, 
         IntegrationType.guild_install,
