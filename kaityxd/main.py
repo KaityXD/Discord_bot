@@ -8,6 +8,8 @@ from nextcord import *
 from colorama import init, Fore
 init(autoreset=True)
 
+# test pr
+
 bot = commands.Bot(intents=Intents.all(), help_command=None)
 
 @bot.event
