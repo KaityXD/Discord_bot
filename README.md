@@ -1,4 +1,4 @@
-# >:D
+# KaityXD
 
 super duper cool discord bot from kaityxd!!!!!!!!
 
