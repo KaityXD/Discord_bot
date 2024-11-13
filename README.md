@@ -32,6 +32,8 @@ code is kinda crappy if you face any issues just make pr if you can fix it but y
 - Gmail: kaitysocute@gmail.com
 - Discord: https://discord.gg/kaityxd
 
+# Testing Fish cogs!!
+
 # license
 
 **Copyright (c) 2024 KaityXD**
